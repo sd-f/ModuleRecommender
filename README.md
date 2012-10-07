@@ -10,9 +10,12 @@ Web Application using several frameworks
   - Gin, Guice
   - I18N (Server, Client)
   - Ressource Bundles, Messages
+
 - Request Factory
+
 - GWTP 0.7 (GWT Platform)
   - Actions, Presenter
+
 - GXT 3.0
   - GXT, UiBuinder
   - Grid, Tree, other UI Components
