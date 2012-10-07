@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+	xmlns:gxtContainer='urn:import:com.sencha.gxt.widget.core.client.container'
+	xmlns:gxtButton='urn:import:com.sencha.gxt.widget.core.client.button'
+	xmlns:gxtForm='urn:import:com.sencha.gxt.widget.core.client.form'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with field='resources'
+		type='com.co.app.modrec.shared.resources.text.COModuleRecommenderTextConstants' />
+
+	<g:ScrollPanel>
+		<g:VerticalPanel width="95%">
+			<gxt:FramedPanel ui:field="panel"
+				headingText="{resources.navElementCurrVersionSelection}">
+				<g:VerticalPanel spacing="5" width="100%">
+					<g:SimplePanel ui:field="pnMyCurriculumVersionList"
+						width="100%">
+					</g:SimplePanel>
+					<g:SimplePanel ui:field="pnCurriculumVersionList"
+						width="100%">
+					</g:SimplePanel>
+				</g:VerticalPanel>
+			</gxt:FramedPanel>
+		</g:VerticalPanel>
+	</g:ScrollPanel>
+
+</ui:UiBinder>

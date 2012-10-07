@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+	xmlns:gxtContainer='urn:import:com.sencha.gxt.widget.core.client.container'
+	xmlns:gxtButton='urn:import:com.sencha.gxt.widget.core.client.button'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with field='appmodrecimages'
+		type='com.co.app.modrec.shared.resources.images.COModuleRecommenderImageResources' />
+	<ui:with field='appmodrectext'
+		type='com.co.app.modrec.shared.resources.text.COModuleRecommenderTextConstants' />
+
+	<gxt:ContentPanel ui:field="cpMain">
+		<g:HorizontalPanel spacing="10">
+			<g:VerticalPanel spacing="10">
+				<gxtButton:TextButton ui:field="btAppModuleRecommender"
+					icon="{appmodrecimages.app_module_recommender_32}" text="{appmodrectext.moduleRecommenderTitle}">
+				</gxtButton:TextButton>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+
+	</gxt:ContentPanel>
+
+</ui:UiBinder>

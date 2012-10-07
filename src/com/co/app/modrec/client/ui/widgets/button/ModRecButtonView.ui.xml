@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+	xmlns:gxtContainer='urn:import:com.sencha.gxt.widget.core.client.container'
+	xmlns:gxtButton='urn:import:com.sencha.gxt.widget.core.client.button'
+	xmlns:gxtForm='urn:import:com.sencha.gxt.widget.core.client.form'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with
+		type="com.co.app.modrec.shared.resources.text.COModuleRecommenderTextConstants"
+		field="texts"></ui:with>
+
+	<ui:style>
+		.largefont {
+			font-size: 1.5em;
+		}
+	</ui:style>
+
+	<g:HorizontalPanel spacing="5" verticalAlignment="ALIGN_MIDDLE">
+		<gxtButton:TextButton ui:field="btCurriculumVersionSelection"></gxtButton:TextButton>
+		<g:SimplePanel width="50px"></g:SimplePanel>
+		<gxtForm:TextField ui:field="tfSearchString" name="q"
+			emptyText="{texts.searchModules}" width="200" addStyleNames="{style.largefont}" />
+		<gxtButton:TextButton ui:field="btSearch" text="{texts.search}"></gxtButton:TextButton>
+	</g:HorizontalPanel>
+</ui:UiBinder>

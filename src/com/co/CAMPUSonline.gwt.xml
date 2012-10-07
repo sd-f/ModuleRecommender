@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module rename-to='campusonline'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.inject.Inject' />
+	<inherits name='com.google.gwt.resources.Resources' />
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+	<inherits name='com.google.gwt.http.HTTP' />
+
+	<!-- GWT Logging -->
+	<inherits name="com.google.gwt.logging.Logging" />
+	<set-property name="gwt.logging.logLevel" value="SEVERE" />
+	<set-property name="gwt.logging.enabled" value="TRUE" />
+	<set-property name="gwt.logging.consoleHandler" value="ENABLED" />
+	<set-property name="gwt.logging.developmentModeHandler"
+		value="DISABLED" />
+	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
+	<set-property name="gwt.logging.systemHandler" value="DISABLED" />
+	<set-property name="gwt.logging.firebugHandler" value="ENABLED" />
+	<set-property name="gwt.logging.simpleRemoteHandler"
+		value="ENABLED" />
+
+	<!-- GWT MVP -->
+	<inherits name='com.gwtplatform.mvp.Mvp' />
+	<inherits name='com.gwtplatform.dispatch.Dispatch' />
+
+	<!-- GXT stuff -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name='com.sencha.gxt.chart.Chart' />
+	<inherits name="com.sencha.gwt.uibinder.UiBinder" />
+
+	<!-- internationalization -->
+	<inherits name="com.google.gwt.i18n.I18N" />
+
+	<!-- additional locale german -->
+	<extend-property name="locale" values="de" />
+
+	<!-- default locale setting and fallback to english -->
+	<extend-property name="locale" values="en" />
+	<set-property-fallback name="locale" value="de" />
+
+	<!-- CO -->
+
+	<!-- Entry Point -->
+	<entry-point class='com.co.client.CAMPUSonline' />
+
+	<!-- main classes including gin modules -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!-- CO shares sources -->
+	<source path='core/shared' />
+
+	<!-- COPage sources -->
+	<source path='core/page/client' />
+	<source path='core/page/shared' />
+
+	<!-- COAuth sources -->
+	<source path='core/auth/client' />
+	<source path='core/auth/shared' />
+
+	<!-- COHome sources -->
+	<source path='core/home/client' />
+	<source path='core/home/shared' />
+
+	<!-- COMyApps -->
+	<source path='core/home/client' />
+	<source path='core/home/shared' />
+
+	<!-- CO Apps -->
+	<source path='core/myapps/client' />
+	<source path='core/myapps/shared' />
+
+	<!-- CO CER -->
+	<source path='app/cer/client' />
+	<source path='app/cer/shared' />
+
+	<!-- Module Recommender -->
+	<source path='app/modrec/client' />
+	<source path='app/modrec/shared' />
+
+	<!-- using GIN -->
+	<define-configuration-property name='gin.ginjector'
+		is-multi-valued='false' />
+	<set-configuration-property name='gin.ginjector'
+		value='com.co.client.gin.ClientGinjector' />
+
+	<!-- replace google rpc request builder for callback animation -->
+	<replace-with class="com.co.core.page.client.callback.CORequestBuilder">
+		<when-type-is class="com.google.gwt.http.client.RequestBuilder" />
+	</replace-with>
+
+</module>

@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+	xmlns:gxtContainer='urn:import:com.sencha.gxt.widget.core.client.container'
+	xmlns:gxtButton='urn:import:com.sencha.gxt.widget.core.client.button'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with field='resources' type='com.co.core.home.shared.resources.images.COHomeImageResources' />
+	<ui:with field='modRecResources' type='com.co.app.modrec.shared.resources.images.COModuleRecommenderImageResources' />
+
+	<ui:style>
+		.s_welcome_label {
+			font-size: 2em;
+			font-weight: bold;
+		}
+	</ui:style>
+
+	<gxt:ContentPanel ui:field="cpMain"  height="500">
+		<g:HorizontalPanel width="100%" spacing="2" verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_CENTER">
+			<g:VerticalPanel spacing="20" verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_CENTER" >
+				<g:SimplePanel>
+					<g:Label addStyleNames="{style.s_welcome_label}" ui:field="welcomeLabel"></g:Label>
+				</g:SimplePanel>
+				<g:SimplePanel>
+					<g:Image ui:field="img" resource='{modRecResources.module_recommender_logo}'></g:Image>
+				</g:SimplePanel>
+				<g:SimplePanel>
+					<g:Image ui:field="imgLogoBig" resource='{resources.logo_big}'></g:Image>
+				</g:SimplePanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+	</gxt:ContentPanel>
+
+</ui:UiBinder>

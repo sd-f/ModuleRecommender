@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<gxt:ContentPanel ui:field="cpMain"  height="200">
+		<g:HorizontalPanel width="100%" spacing="2" verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_CENTER">
+			<g:VerticalPanel spacing="30" verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_CENTER" >
+				<g:SimplePanel>
+					<g:Label ui:field="lbNotAuthorizedText"></g:Label>
+				</g:SimplePanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+	</gxt:ContentPanel>
+
+</ui:UiBinder>
+

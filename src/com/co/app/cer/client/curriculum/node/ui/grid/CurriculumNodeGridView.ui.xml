@@ -1,0 +1,67 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+	xmlns:gxtContainer='urn:import:com.sencha.gxt.widget.core.client.container'
+	xmlns:gxtButton='urn:import:com.sencha.gxt.widget.core.client.button'
+	xmlns:gxtForm='urn:import:com.sencha.gxt.widget.core.client.form'
+	xmlns:gxtGrid='urn:import:com.sencha.gxt.widget.core.client.grid'
+	xmlns:gxtToolbar='urn:import:com.sencha.gxt.widget.core.client.toolbar'
+	xmlns:gxtMenu='urn:import:com.sencha.gxt.widget.core.client.menu'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with
+		type="com.co.app.modrec.shared.resources.images.COModuleRecommenderImageResources"
+		field="images" />
+
+	<ui:with
+		type="com.co.app.modrec.shared.resources.text.COModuleRecommenderTextConstants"
+		field="texts" />
+
+	<ui:style>
+		.background {
+			background-color: white;
+		}
+	</ui:style>
+
+	<ui:with field='resources'
+		type='com.co.app.modrec.shared.resources.text.COModuleRecommenderTextConstants' />
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="northData" />
+	<ui:with type="com.sencha.gxt.widget.core.client.container.MarginData"
+		field="centerData" />
+
+	<gxtContainer:BorderLayoutContainer
+		ui:field="con" borders="true">
+		<gxtContainer:north layoutData="{northData}">
+			<gxt:ContentPanel ui:field="pnToolbar"
+				headerVisible="false" bodyBorder="false" borders="false">
+				<gxtToolbar:ToolBar>
+					<gxtButton:TextButton ui:field="btRecommended"
+						text="{texts.recommendationFromStudents}" />
+					<gxtButton:TextButton ui:field="btRecommendedByLecturer"
+						text="{texts.recommendedByLecturer}" />
+					<gxtToolbar:FillToolItem></gxtToolbar:FillToolItem>
+					<gxtButton:ToggleButton ui:field="btSemesterType"
+						text="{texts.recommendedSemster}" />
+					<gxtButton:ToggleButton ui:field="btSemester"
+						text="{texts.semester}" />
+					<gxtButton:ToggleButton ui:field="btAttendance"
+						text="{texts.attendance}" />
+					<gxtButton:ToggleButton ui:field="btAttendanceInactive"
+						text="{texts.attendanceInactive}" />
+				</gxtToolbar:ToolBar>
+			</gxt:ContentPanel>
+		</gxtContainer:north>
+		<gxtContainer:center layoutData="{centerData}">
+			<gxt:ContentPanel ui:field="pnList" headerVisible="false"
+				bodyBorder="false" borders="false">
+			</gxt:ContentPanel>
+		</gxtContainer:center>
+	</gxtContainer:BorderLayoutContainer>
+
+</ui:UiBinder>

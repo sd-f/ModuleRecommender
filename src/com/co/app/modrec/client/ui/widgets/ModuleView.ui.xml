@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+	xmlns:gxtContainer='urn:import:com.sencha.gxt.widget.core.client.container'
+	xmlns:gxtButton='urn:import:com.sencha.gxt.widget.core.client.button'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with field='resources'
+		type='com.co.app.modrec.shared.resources.text.COModuleRecommenderTextConstants' />
+
+	<ui:style>
+		.centerMargin {
+			margin: 10px;
+		}
+	</ui:style>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="westData" />
+	<ui:with type="com.sencha.gxt.widget.core.client.container.MarginData"
+		field="centerData" />
+
+	<gxtContainer:BorderLayoutContainer
+		ui:field="con" borders="true">
+		<gxtContainer:west layoutData="{westData}">
+			<gxt:ContentPanel>
+				<g:ScrollPanel>
+					<g:SimplePanel ui:field="cpTree">
+					</g:SimplePanel>
+				</g:ScrollPanel>
+			</gxt:ContentPanel>
+		</gxtContainer:west>
+		<gxtContainer:center layoutData="{centerData}">
+			<gxt:ContentPanel ui:field="cpMain">
+			</gxt:ContentPanel>
+		</gxtContainer:center>
+	</gxtContainer:BorderLayoutContainer>
+
+</ui:UiBinder>
