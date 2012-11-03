@@ -19,6 +19,7 @@ Web Application using several frameworks
 - Others
   - guava
   - JPA
+- maven
 
 Some Code Parts have been removed, so this project is for copying fragments
 and should help others make use of some of the frameworks mentioned above.
